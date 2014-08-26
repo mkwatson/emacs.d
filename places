@@ -1,0 +1,12 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/mwatson/.emacs.d/elpa/rainbow-delimiters-1.3.21/rainbow-delimiters-autoloads.el" . 1607)
+ ("/Users/mwatson/.lein/init.clj" . 138)
+ ("/Users/mwatson/Coq/lists.v" . 273)
+ ("/Users/mwatson/Datasnap/indegestor/project.clj" . 1794)
+ ("/Users/mwatson/Datasnap/indegestor/src/indegestor/core.clj" . 1325)
+ ("/Users/mwatson/Datasnap/indegestor/test/indegestor/core_test.clj" . 430)
+ ("/Users/mwatson/Datasnap/okapi/project.clj" . 1286)
+ ("/Users/mwatson/Datasnap/okapi/src/okapi/handler.clj" . 4067)
+ ("/Users/mwatson/Datasnap/okapi/src/okapi/mongo.clj" . 545)
+ ("/Users/mwatson/Datasnap/okapi/src/okapi/timeframe.clj" . 1959)
+ ("/Users/mwatson/Datasnap/okapi/test/okapi/test/core.clj" . 1304))

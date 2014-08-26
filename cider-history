@@ -1,0 +1,635 @@
+;; -*- coding: utf-8-unix -*-
+;; Automatically written history of CIDER REPL session
+;; Edit at your own risk
+
+("(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}
+                                                                         :day   { \"$dayOfMonth\"   \"$datasnap.created\"}
+                                                                         :year  { \"$year\"  \"$datasnap.created\"}
+                                                                         :hour  { \"$hour\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}}])" "(clojure.pprint/pprint *1)" "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}
+                                                                         :day   { \"$dayOfMonth\"   \"$datasnap.created\"}
+                                                                         :year  { \"$year\"  \"$datasnap.created\"}
+                                                                         :hour  { \"$hour\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}}])" "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}
+                                                                         :day   { \"$dayOfMonth\"   \"$datasnap.created\"}
+                                                                         :year  { \"$year\"  \"$datasnap.created\"}}
+                                                                         :hour  { \"$hour\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}])" "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}
+                                                                         :day   { \"$dayOfMonth\"   \"$datasnap.created\"}
+                                                                         :year  { \"$year\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}}])" "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}
+                                                                         :day   { \"$day\"   \"$datasnap.created\"}
+                                                                         :year  { \"$year\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}}])" "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}}
+                                                                        {:day   { \"$day\"   \"$datasnap.created\"}}
+                                                                        {:year  { \"$year\"  \"$datasnap.created\"}}}
+                                                                   :count { \"$sum\" 1}}])
+                                                        " "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}}
+                                                                        {:day   { \"$day\"   \"$datasnap.created\"}}
+                                                                        {:year  { \"$year\"  \"$datasnap.created\"}}
+                                                                   :count { \"$sum\" 1}}}])
+                                                        " "(mc/aggregate (:db @mongo-conn) mongo-coll [
+                                                        {
+                                                         \"$group\" {:_id {:month { \"$month\" \"$datasnap.created\"}}
+                                                                        {:day   { \"$day\"   \"$datasnap.created\"}}
+                                                                        {:year  { \"$year\"  \"$datasnap.created\"}}
+                                                                   count: { \"$sum\" 1}}}])
+                                                        " "(mc/count (:db @mongo-conn) mongo-coll {:event_type \"beacon_depart\"})" "(mc/aggregate (:db @mongo-conn) 
+              mongo-coll 
+                [{$group {
+                    _id { \"month\": { $dayOfMonth \"$datasnap.created\" }}}
+                    count { $sum 1}}])" "(:db @mongo-conn)" "(mc/aggregate (:db @mongo-conn) 
+              mongo-coll 
+                [{$group {
+                    _id { \"month\": { \"$month\" \"$datasnap.created\" }}}
+                    count { $sum 1}}])" "(mc/aggregate (:db @mongo-conn) 
+              mongo-coll 
+                [{$group {
+                    _id { month: { $month \"$datasnap.created\" }}}
+                    count { $sum 1}}])" "(+ \"6\" \"1\")" "(+ \"6\" 1)" "(app *1)" "(mock/request :get \"/invalid\")" "(ns okapi.test.core
+              (:require [clojure.test :refer :all]
+                        [okapi.core :refer :all]
+                        [ring.mock.request :as mock]))" "(app *1)" "(mock/request :get \"/invalid\")" "(let [response (app (mock/request :get \"/invalid\"))]
+                   (is (= (:status response) 404)))" "(ns okapi.test.core
+              (:require [clojure.test :refer :all]
+                        [okapi.core :refer :all]
+                        [ring.mock.request :as mock]))" "(let [query1 {:start \"2014-01-01\" :other \"other value\"}
+                   query2 {:end \"2014-01-01\" :other \"other value\"}
+                   query3 {:start \"2014-01-01\" :end \"2014-01-02\"}
+                   query4 {:other \"other value\"}]
+               (handle-query-dates query4))" "(let [query1 {:start \"2014-01-01\" :other \"other value\"}
+                   query2 {:end \"2014-01-01\" :other \"other value\"}
+                   query3 {:start \"2014-01-01\" :end \"2014-01-02\"}
+                   query4 {:other \"other value\"}]
+               (handle-query-dates query3))" "(let [query1 {:start \"2014-01-01\" :other \"other value\"}
+                   query2 {:end \"2014-01-01\" :other \"other value\"}
+                   query3 {:start \"2014-01-01\" :end \"2014-01-02\"}
+                   query4 {:other \"other value\"}]
+               (handle-query-dates query2))" "(let [query1 {:start \"2014-01-01\" :other \"other value\"}
+                   query2 {:end \"2014-01-01\" :other \"other value\"}
+                   query3 {:start \"2014-01-01\" :end \"2014-01-02\"}
+                   query4 {:other \"other value\"}]
+               (handle-query-dates query1))" "(assoc-in {:two {:two 1 :three 2} :four 3} [:one :six ] 60)" "(handle-query-dates {:start \"startdate\" :other \"fakevalue\"})" "(handle-query-dates {:start \"startdate\" :end \"enddate\" :other \"fakevalue\"})" "(handle-query-dates {:start \"startdate\" :end \"enddate\"})" "(defn handle-query-dates
+              \"Transform query start/end dates into something MongoDB understands\"
+              [query]
+              (let [ks (filter query [:start :end])]
+                (if (not-empty ks)
+                  (loop [out (assoc query :created {}) ks-left ks]
+                    (if (empty? ks-left)
+                      out
+                      (recur (-> out
+                                 (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$lte\"})] ((first ks-left) query))
+                                 (dissoc (first ks-left)))
+                             (rest ks-left))))
+                  query)))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (println {:out out :ks-left ks-left :empty? (empty? ks-left)})
+                  (if (empty? ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                               (dissoc (first ks-left)))
+                           (rest ks-left))))
+                query))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (println {:out out :ks-left ks-left :count (count ks-left)})
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                               (dissoc (first ks-left)))
+                           (rest ks-left))))
+                query))" "})
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                               (dissoc (first ks-left)))
+                           (rest ks-left))))
+                query))" "(count '(:one :two))" "(rest '(:start :end))" "(rest :start :end)" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (println {:out out :ks-left ks-left})
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                               (dissoc (first ks-left)))
+                           (rest ks-left))))
+                query))" "(handle-query-dates {:start \"startdate\" :end \"enddate\"})" "(defn handle-query-dates
+              \"Transform query start/end dates into something MongoDB understands\"
+              [query]
+              (let [ks (filter query [:start :end])]
+                (if (not-empty ks)
+                  (loop [out (assoc query :created {}) ks-left ks]
+                    (if (empty ks-left)
+                      out
+                      (recur (-> out
+                                 (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                                 (dissoc (first ks-left)))
+                             (rest ks-left))))
+                  query)))" "(defn handle-query-dates
+  \"Transform query start/end dates into something MongoDB understands\"
+  [query]
+  (let [ks (filter query [:start :end])]
+    (if (not-empty ks)
+      (loop [out (assoc query :created {}) ks-left ks]
+        (if (empty ks-left)
+          out
+          (recur (-> out
+                     (assoc-in [:created ((first ks-left) {:start \"$fte\" :end \"$let\"})] ((first ks-left) query))
+                     (dissoc (first ks-left)))
+                 (rest ks-left))))
+      query)))" "(-> {:start \"startdate\", :created {}, :otherkey \"othervalue\", :end \"enddate\"}
+                (dissoc (first '(:start :end))))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (println {:out out :ks-left ks-left})
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                               (dissoc (first ks)))
+                           (rest ks-left))))
+                query))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                               (dissoc (first ks)))
+                           (rest ks-left))))
+                query))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (dissoc (first ks)))
+                           (rest ks-left))))
+                query))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (if (empty ks-left)
+                    out
+                    (do (println {:out out :ks-left ks-left}) 
+                        (recur (-> out
+                               (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                               (dissoc (first ks)))
+                           (rest ks-left)))
+                    )
+                query)))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                               (dissoc (first ks)))
+                           (rest ks-left))))
+                query))" "(let [ks (filter query [:start :end])]
+              (if (not-empty ks)
+                (loop [out (assoc query :created {}) ks-left ks]
+                  (if (empty ks-left)
+                    out
+                    (recur (-> out
+                               (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                               (dissoc (first ks)))
+                           (rest ks-left))))
+                query)))" "(handle-query-dates {:start \"startdate\" :end \"enddate\"})" "(def query  {:start \"startdate\" :end \"enddate\" :otherkey \"othervalue\"})" "(defn handle-query-dates
+              \"Transform query start/end dates into something MongoDB understands\"
+              [query]
+              (let [ks (filter query [:start :end])]
+                (if (not-empty ks)
+                  (loop [out (assoc query :created {}) ks-left ks]
+                    (if (empty ks-left)
+                      out
+                      (recur (-> out
+                                 (assoc-in [:created ((first ks) {:start \"$fte\" :end \"$let\"})] ((first ks) query))
+                                 (dissoc (first ks)))
+                             (rest ks-left))))
+                  query)))" "(not-empty *1)" "(filter query [:start :end])" "(flilter query [:start :end])" "query" "(def query  {:start \"startdate\" :end \"enddate\" :otherkey \"othervalue\"})" "(handle-query-dates {:start \"startdate\" :end \"enddate\"})" "(defn handle-query-dates
+              \"Transform query start/end dates into something MongoDB understands\"
+              [query]
+              (let [ks (filter query [:start :end])]
+                (if (not-empty ks)
+                  (loop [out (assoc query :created {}) ks-left ks]
+                    (if (empty ks-left)
+                      out
+                      (recur (-> out
+                                 (assoc-in [:created (ks {:start \"$fte\" :end \"$let\"})] (ks query))
+                                 (dissoc ks))
+                             (rest ks-left))))
+                  query)))" "(assoc-in {:one {:two 1 :three 2} :four 3} [:one :six ] 60)" "(assoc-in {:one {:two 1 :three 2} :four 3} [:one :two ] 60)" "(assoc {:one 1 :two 2} :created {})" "(assoc {:created {}} {:one 1 :two 2})" "(map (partial find {:start 1 :end 2}) [:one :end])" "(apply (partial find {:start 1 :end 2}) [:one :end])" "(apply find {:start 1 :end 2} [:one :end])" "(find {:start 1 :end 2} [:one :end])" "(filter {:start 1 :end 2} [:one :two])" "(filter {:start 1 :end 2} [:one :end])" "(filter {:start 1 :end 2} [:start :end])" "(if (not-empty '(:one)) true false)" "(if (not-empty '()) true false)" "(filter identity *1)" "(filter {:one 1 :two 2} [:four :three])" "(filter {:one 1 :two 2} [:one :three])" "(
+             
+             
+             )" "(filter identity *1)" "(map {:one 1 :two 2} [:one :three])" "(if-let [ks (apply {:one 1 :two 2} [:one :three])] ks nil)" "(if-let [ks (apply get {:one 1 :two 2} [:one :three])] ks nil)" "(if-let [ks (get {:one 1 :two 2} [:one :three])] ks nil)" "(if-let [ks (get {:one 1 :two 2} [:four :three])] ks nil)" "(if-let [ks (select-keys {:one 1 :two 2} [:four :three])] ks nil)" "(if-let [ks (select-keys {:one 1 :two 2} [:one :three])] ks nil)" "(map (partial contains? {:start :one :end :two}) [:start :end])" "(apply (partial contains? {:start :one :end :two}) [:start :end])" "(filter [:start :end] {:start 1 :one 2})" "(filter [:start :end] [:start :one :two])" "(if-let [x (- 1 10)
+                     y (+ 2 3)]
+              {:x x :y y}
+              nil)" "(if-let [x (- 1 10)
+                     y (+ 2 3)]
+              {:x x:y y}
+              nil)" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")}
+                                                    :event_type \"beacon_depart\"})" "(mc/count (:db @mongo-conn) mongo-coll {:event_type \"beacon_depart\"})" "(mc/count (:db @mongo-conn) mongo-coll {:event_type \"beacon_departed\"})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")}
+                                                    :event_type \"beacon_departed\"})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")}
+                                                    :datasnap.created {\"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-21\")}})" "mongo-coll" "(:db @mongo-conn)" "(.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-20\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-21\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-21\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-18\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-19\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-20\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimeDateFormat. \"yyyy-MM-dd\") \"2014-08-20\")}})" "(import '[java.text.SimeDateFormat])" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.created {\"$lte\" (.parse (java.text.SimeDateFormat. \"yyyy-MM-dd\") \"2014-08-20\")}})" "(mc/count (:db @mongo-conn) mongo-coll {:datasnap.device.manufacturer \"Apple\"})" "(mc/count (:db @mongo-conn) mongo-coll {:event_type \"beacon_depart\"})" "(ns okapi.core
+  (:require [compojure [core :refer :all]
+                       [handler :as handler]
+                       [route :as route]]
+            [ring.middleware [json :refer [wrap-json-response]]
+                             [params :refer [wrap-params]]]
+            [monger [core :as mg]
+                    [collection :as mc]]
+            [cheshire.core :as json]
+            [clojure.pprint :only pprint])
+  (:import [com.mongodb MongoOptions ServerAddress]
+           [java.text.SimpleDateFormat]))
+
+;; TODO: fix namespacing
+
+(def ^{:doc \"MongoDB URI\"}
+  mongo-uri \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\")
+
+(def ^{:doc \"MongoDB Collection\"}
+  mongo-coll \"from-sdk0.1\")
+
+(def ^{:doc \"White list of fields that API recognizes\"}
+  field-white-list
+  #{:event_type
+    :api_key
+    :start
+    :end
+    :timeframe
+    :org_id
+    :country
+    :region
+    :city
+    :address
+    :beacon_name
+    :geofence_name})
+
+(def mongo-conn
+  (atom (mg/connect-via-uri mongo-uri)))
+
+(defn mongo-find-count
+  \"Find in MongoDB\"
+  [find-map]
+  (let [{:keys [db]} @mongo-conn
+        find-map     (into {} (filter (comp field-white-list key) find-map))
+        result       (mc/count db mongo-coll find-map)]
+    {:result result}))
+
+(defn replace-in
+  \"If key (k) exists in map (in-map), replace key with new key (nk)
+   and value (f v)\"
+  [in-map k nk f]
+  (if-let [v (in-map k)]
+    {nk (f v)}
+    in-map))
+
+(defn transform-query
+  \"Transforms special query fields\"
+  [query-map]
+  (-> query-map
+      (replace-in :start :datasnap.created (fn [x] { \"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") x)}))
+      ))
+
+(def not-found
+  {:status 404 :body \"Not Found\"})
+
+(defn json-response
+  \"Successful JSON request\"
+  [data]
+  {:status 200
+   :headers {\"Content-Type\" \"application/json\"}
+   :body (json/generate-string data)})
+
+(defn inner-routes [request]
+  (routes
+   (GET \"/count\" {:keys [:params] :as request}
+        (json-response (-> params
+                           transform-query
+                           ;;mongo-find-count
+                           println)))
+   (GET \"/series\" [] not-found)
+   (GET \"/trend\" [] not-found)))
+
+(defroutes okapi-routes
+  (context \"/v0/events\" []
+           (context \"/visits\" request (inner-routes request))
+           (context \"/app\" [] not-found)
+           (context \"/places\" [] not-found)
+           (context \"/geofences\" [] not-found)
+           (context \"/beacons\" [] not-found)))
+
+(def app
+  (-> okapi-routes
+      wrap-json-response
+      handler/api))
+
+(defn init
+  \"Initialization: connect to MongoDB\"
+  []
+  (reset! mongo-conn (mg/connect-via-uri mongo-uri)))
+
+(defn destroy
+  \"Termination: disconnect from MongoDB\"
+  []
+  (mg/disconnect @mongo-conn))
+" "(transform-query {:start \"2010-08-20\"})" "(defn transform-query
+        \"Transforms special query fields\"
+        [query-map]
+        (-> query-map
+            (replace-in :start :datasnap.created (fn [x] { \"$gte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") x)}))
+            ))" "(defn replace-in
+        \"If key (k) exists in map (in-map), replace key with new key (nk)
+   and value (f v)\"
+        [in-map k nk f]
+        (if-let [v (in-map k)]
+          {nk (f v)}
+          in-map))" "(replace-in {:start \"2014-08-19\"} :start :datasnap.created (fn [x] { \"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") x)}))" "(replace-in {:start \"2014-08-19\"} :start :datasnap.created #({ \"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") %)}))" "(defn replace-in
+        \"If key (k) exists in map (in-map), replace key with new key (nk)
+   and value (f v)\"
+        [in-map k nk f]
+        (if-let [v (in-map k)]
+          {nk (f v)}
+          in-map))" "(if-let [v (in-map k)]
+        (-> in-map
+            (assoc nk (f v)))
+        nil)" "(if-let [v (in-map k)]
+        (f v)
+        nil)" "(def f (fn [x] { \"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") x)}))" "(if-let [v (in-map k)]
+        (f v)
+        nil)" "(if-let [v (in-map k)]
+        (-> in-map
+            (assoc nk (f v)))
+        nil)" "(if-let [v (in-map k)]
+        (-> in-map)
+        nil)" "(if-let [v (in-map k)]
+        v
+        nil)" "(def f #({ \"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") %)}))" "(def nk :created)" "(def k :start)" "(def in-map {:start \"2014-08-19\"})" "(replace-in {:start \"2014-08-19\"} :start :datasnap.created #({ \"$lte\" (.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") %)}))" "(defn replace-in
+        \"If key (k) exists in map (in-map), replace key with new key (nk)
+   and value (f v)\"
+        [in-map k nk f]
+        (if-let [v (in-map k)]
+          (-> in-map
+              (assoc nk (f v))
+              (dissoc k))
+          in-map)
+        )" "(.parse (java.text.SimpleDateFormat. \"yyyy-MM-dd\") \"2014-08-20\")" "(.parse (java.text.SimpleDateFormat \"yyyy-MM-dd\") \"2014-08-20\")" "(let [date-format (new java.text.SimpleDateFormat \"yyyy-MM-dd\")]
+        (.parse date-format \"2010-01-10\"))" "(let [date-format (new SimpleDateFormat \"yyyy-MM-dd\")]
+        (.parse date-format \"2010-01-10\"))" "(:import '[java.text.SimpleDateFormat])" "(let [date-format (new SimpleDateFormat \"yyyy-MM-dd\")]
+        (.parse date-format \"2010-01-10\"))" "(new DateFormat \"2010-01-05\")" "(:import '[java.text.DateFormat])" "(doc defn)" "(def defn)" "({:two 2} :one)" "(:one {:two 2})" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (first (mc/find-maps db coll {:event_type \"beacon_depart\"})))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find-maps db coll {:event_type \"beacon_depart\"}))" "(filter #{:one :teo :three} '(:one :three :four :five))" "(#{:one :two} :one)" ")" "([:one :two] :one)" "(filter [:one :teo :three] '(:one :three :four :five))" "(assoc {:one 1 :two 2} :one 3)" "(def app
+                 (assoc-query-params okapi-routes))" "(ns okapi.handler
+                 (:require [compojure.core :refer :all]
+                           [compojure.handler :as handler]
+                           [compojure.route :as route]
+                           [ring.middleware.json :refer [wrap-json-response]]
+                           [ring.middleware.params :refer [assoc-query-params]]
+                           [monger.core :as mg]
+                           [monger.collection :as mc])
+                 (:import [com.mongodb MongoOptions ServerAddress]))" "(def app
+                 (assoc-query-params okapi-routes))" "c(def app
+                  (assoc-query-params okapi-routes))" "(ns okapi.handler
+                 (:require [compojure.core :refer :all]
+                           [compojure.handler :as handler]
+                           [compojure.route :as route]
+                           [ring.middleware.json :only 'wrap-json-response]
+                           [ring.middleware.params :only 'assoc-query-params]
+                           [monger.core :as mg]
+                           [monger.collection :as mc])
+                 (:import [com.mongodb MongoOptions ServerAddress]))" "(def app
+  (assoc-query-params okapi-routes))" "(defroutes okapi-routes
+  (context \"/v0/events/visits\" []
+           (GET \"/count\" request
+                (println request)
+                \"Hello World\")))" "(ns okapi.handler
+  (:require [compojure.core :refer :all]
+            [compojure.handler :as handler]
+            [compojure.route :as route]
+            [ring.middleware.json :only [wrap-json-response]]
+            [ring.middleware.params :only [assoc-query-params]]
+            [monger.core :as mg]
+            [monger.collection :as mc])
+  (:import [com.mongodb MongoOptions ServerAddress]))" "(count (let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                            coll              \"from-sdk0.1\"
+                            {:keys [conn db]} (mg/connect-via-uri uri)]
+                        (mc/find-maps db coll {:event_type \"beacon_depart\"})))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (clojure.pprint/pprint (first (mc/find-maps db coll {:event_type \"beacon_depart\"}))))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (clojure.pprint/pprint (first (mc/find-maps db coll {:event_type \"beacon_sighting\"}))))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (clojure.pprint/pprint (first (mc/find-maps db coll))))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (clojure.pprint/prrint (first (mc/find-maps db coll))))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (first (mc/find-maps db coll {:name \"unnamed location event\"})))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (first (mc/find-maps db coll)))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (first (mc/find db coll)))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find-one db coll))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find-one db coll {:event_type \"beacon_event\"}))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find db coll {:event_type \"beacon_event\"}))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find db coll {:event_type \"beacon_depart\"}))" "(ns okapi.handler
+                 (:require [compojure.core :refer :all]
+                           [compojure.handler :as handler]
+                           [compojure.route :as route]
+                           [ring.middleware.format :refer [wrap-restful-format]]
+                           [monger.core :as mg]
+                           [monger.collection :as mc])
+                 (:import [com.mongodb MongoOptions ServerAddress]))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     coll              \"from-sdk0.1\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)]
+                 (mc/find db coll {:event_type \"beacon_depart\"}))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     {:keys [conn db]} (mongo/connect-via-uri uri)]
+                 (clojure.pprint/pprint 
+                  {:db db
+                   :conn conn}))" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     {:keys [conn db]} (mongo/connect-via-uri uri)])" "(let [uri               \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"
+                     {:keys [conn db]} (mg/connect-via-uri uri)])" "(ns okapi.handler
+        (:require [compojure.core :refer :all]
+                  [compojure.handler :as handler]
+                  [compojure.route :as route]
+                  [ring.middleware.format :refer [wrap-restful-format]]
+                  [monger.core :as mongo])
+        (:import [com.mongodb MongoOptions ServerAddress]))" "(:require [compojure.core :refer :all]
+            [compojure.handler :as handler]
+            [compojure.route :as route]
+            ;; [somnium.congomongo :as mongo]
+            [ring.middleware.format :refer [wrap-restful-format]]
+            [monger.core :as mongo])" "(ns okapi.handler
+        (:require [compojure.core :refer :all]
+                  [compojure.handler :as handler]
+                  [compojure.route :as route]
+                  ;; [somnium.congomongo :as mongo]
+                  [ring.middleware.format :refer [wrap-restful-format]]
+                  [monger.core :as mongo]
+                  (:import [com.mongodb MongoOptions ServerAddress])))" "(require '[compojure.core :refer :all]
+                '[compojure.handler :as handler]
+                '[compojure.route :as route]
+                ';; [somnium.congomongo :as mongo]
+                '[ring.middleware.format :refer [wrap-restful-format]]
+                '[monger.core :as mongo])" "(:require [compojure.core :refer :all]
+                [compojure.handler :as handler]
+                [compojure.route :as route]
+                ;; [somnium.congomongo :as mongo]
+                [ring.middleware.format :refer [wrap-restful-format]]
+                (:require [monger.core :as mongo])
+                (:import [com.mongodb MongoOptions ServerAddress]))" "(mongo/find conn
+                  :from-sdk0.1 :where {:event_type \"beacon_depart\"})" "(def ^{:doc \"MongoDB connection\"}
+        conn
+        (mongo/make-connection \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"))" "(require '[compojure.core :refer :all]
+                '[compojure.handler :as handler]
+                '[compojure.route :as route]
+                '[somnium.congomongo :as mongo]
+                '[ring.middleware.format :refer [wrap-restful-format]])" "(doc for)" "(require [compojure.core :refer :all]
+                [compojure.handler :as handler]
+                [compojure.route :as route]
+                [somnium.congomongo :as mongo]
+                [ring.middleware.format :refer [wrap-restful-format]])" "(doc for)" "(doc defn)" "(doc for)" "(mongo/find conn
+                           :from-sdk0.1 :where {:event_type \"beacon_depart\"})" "(mongo/connection? conn)" "(connection? conn)" "(mongo/aggregate conn
+                                :from-sdk0.1 :where {:event_type \"beacon_depart\"})" "(def ^{:doc \"MongoDB connection\"}
+                 conn
+                 (mongo/make-connection \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"))" "(ns okapi.handler
+        (:require [compojure.core :refer :all]
+                  [compojure.handler :as handler]
+                  [compojure.route :as route]
+                  [somnium.congomongo :as mongo]
+                  [ring.middleware.format :refer [wrap-restful-format]]))" "(filter #(instance? java.lang.Long (/ 11 %)) (range 1 12))" "(filter #(instance? java.lang.Long (/ 11 %)) (range 1 11))" "(filter #(instance? java.lang.Long (/ 11 %)) (range 11))" "(instance? java.lang.Long (/ 2 2))" "(instance? java.lang.Long (/ 1 2))" "(== *1 *2)" "(type 2)" "(type (/ 1 2))" "(filter #(== (type (/ % 2)) (type 2)) (range 10))" "(filter #(== (type / % 2)) (range 10))" "(type (/ 2 2))" "(class (/ 2 2))" "(/ 3 2)" "(type (/ 3 2))" "(class (/ 3 2))" "(doc class)" "(doc type)" "(ns okapi.handler
+        (:require [compojure.core :refer :all]
+                  [compojure.handler :as handler]
+                  [compojure.route :as route]
+                  [somnium.congomongo :as mongo]
+                  [ring.middleware.format :refer [wrap-restful-format]]))" "(def ^{:doc \"MongoDB connection\"}
+        conn
+        (mongo/make-connection \"mongodb://aws:SF-DataSnap!@lighthouse.1.mongolayer.com:10161/datamanager\"))" "(doc def)" "(doc major-version)" "(clojure.pprint/pprint (meta #'major-version))" "(def ^{:doc \"Major version number, to be unsed in API path\"}
+        major-version
+        (as-> \"project.clj\" ?
+              (slurp ?)
+              (read-string ?)
+              (nth ? 2)
+              (re-find #\"[^.]+\" ?)))" "(clojure.pprint/pprint (meta #'+))" "(as-> \"project.clj\" ?
+            (slurp ?)
+            (read-string ?)
+            (nth ? 2)
+            (re-find #\"[^.]+\" ?)
+            )" "(as-> \"project.clj\" ?
+            (slurp ?)
+            (read-string ?)
+            (nth ? 2)
+            (re-find #\"^.+\" ?)
+            )" "(as-> \"project.clj\" ?
+            (slurp ?)
+            (read-string ?)
+            (nth ? 2)
+            (re-find #\"\\\\.+\" ?)
+            )" "(as-> \"project.clj\" ?
+            (slurp ?)
+            (read-string ?)
+            (nth ? 2)
+            (re-find #\"\\[0-9]+\" ?)
+            )" "(as-> \"project.clj\" ?
+            (slurp ?)
+            (read-string ?)
+            (nth ? 2)
+            (re-find #\"\\[0-9]+\")
+            )" "(nth *1 2)" "(read-string *1)" "(slurp \"project.clj\")" "(ns indegestor.core
+                   (:require [clojure.tools.logging :as log]
+                             [cheshire.core :as json]
+                             [ring.util.request :as req]
+                             [environ.core :refer [env]]
+                             [clj-time.core :refer [now]]
+                             [compojure.route :as route]
+                             [compojure.core :refer [defroutes PUT POST context]]
+                             [amazonica.aws.s3 :as s3]
+                             [amazonica.aws.s3transfer :as s3-transfer]
+                             [csomnium.congomongo :as mongo]))" "(let [conn (mg/connect {:host \"lighthouse.1.mongolayer.com\" :port 10161})
+                       db   (mg/get-db conn \"datamanager\")
+                       u    \"​mark\"
+                       p    (.toCharArray \"test\")]
+                   (mg/get-db-names conn))" "(let [conn (mg/connect {:host \"lighthouse.1.mongolayer.com\" :port 10161})
+                       db   (mg/get-db conn \"datamanager\")
+                       u    \"​mark\"
+                       p    (.toCharArray \"test\")]
+                   (mg/get-dbs conn))" "(mg/connect {:host \"lighthouse.1.mongolayer.com\" :port 10161})" "(mg/connect-via-uri \"mongodb://​mark:test@lighthouse.1.mongolayer.com:10161/datamanager\")" "(let [conn (mg/connect {:host \"candidate.35.mongolayer.com\" :port 10384})
+      db   (mg/get-db conn \"datasnap_datamanager\")
+      u    \"​mark\"
+      p    (.toCharArray \"test\")]
+  db)" "(ns indegestor.core
+                   (:require [clojure.tools.logging :as log]
+                             [cheshire.core :as json]
+                             [ring.util.request :as req]
+                             [environ.core :refer [env]]
+                             [clj-time.core :refer [now]]
+                             [compojure.route :as route]
+                             [compojure.core :refer [defroutes PUT POST context]]
+                             [amazonica.aws.s3 :as s3]
+                             [amazonica.aws.s3transfer :as s3-transfer]
+                             [monger.core :as mg])
+                   (:import [com.mongodb MongoOptions ServerAddress]))" "(let [conn (mg/connect {:host \"candidate.35.mongolayer.com\" :port 10384})
+      db   (mg/get-db conn \"datasnap_datamanager\")
+      u    \"​mark\"
+      p    (.toCharArray \"test\")]
+  db)" "cred" "(def cred {:access-key (env :aws-access-key)
+                            :secret-key (env :aws-secret-key)
+                            :endpoint \"us-west-1\"})" "(s3/list-buckets cred)" "(list-buckets cred)" "(def cred {:access-key (env :aws-access-key)
+                            :secret-key (env :aws-secret-key)
+                            :endpoint \"us-west-1\"})" "(def cred {:access-key (env :aws-access-key)
+                            :secret-key (env :aws-secret-key)})" "(ns indegestor.core
+                   (:require [clojure.tools.logging :as log]
+                             [cheshire.core :as json]
+                             [ring.util.request :as req]
+                             [environ.core :refer [env]]
+                             [clj-time.core :refer [now]]
+                             [compojure.route :as route]
+                             [compojure.core :refer [defroutes PUT GET]]
+                             [amazonica.aws.s3 :as s3]
+                             [amazonica.aws.s3transfer :as s3-transfer]))" "(put-object :bucket-name \"gimble-event-test\"
+            :key \"test\"
+            :data \"this is a test\")" "(use 'amazonica.core)" "(doc 'amazonica.aws.s3)" "(doc amazonica.aws.s3)" "(put-object :bucket-name \"gimble-event-test\"
+            :key \"test\"
+            :data \"this is a test\")" "(use 'amazonica.aws.s3)" "(put-object :bucket-name \"gimble-event-test\"
+            :key \"test\"
+            :data \"this is a test\")" "(use 'amazonica.aws.s3transfer)" "(use 'amazonica.s3transfer)" "(put-object :bucket-name \"gimble-event-test\"
+            :key \"test\"
+            :data \"this is a test\")" "source ~/.zshrc" "(use 'amazonica.aws.s3transfer)" "(use 'amazonica.aws.s3)" "('use amazonica.aws.s3)" "(use amazonica.aws.s3)" "(clojure-version)" "(clojure-verion)" "(doc as->)" "(doc defn)")

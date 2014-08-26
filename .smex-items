@@ -1,0 +1,33 @@
+
+;; ----- smex-history -----
+(
+ paredit-mode
+ package-list-packages
+ check-parens
+ kill-buffer
+ kill-some-buffers
+ cd
+ term
+)
+
+;; ----- smex-data -----
+(
+ (cd . 1)
+ (package-list-packages . 2)
+ (package-install . 1)
+ (term . 1)
+ (eshell . 1)
+ (cider-jack-in . 7)
+ (global-rainbow-delimiters-mode . 4)
+ (paredit-mode . 54)
+ (kill-buffer . 2)
+ (kill-some-buffers . 3)
+ (cider-repl-toggle-pretty-printing . 5)
+ (cider-mode-menu . 1)
+ (cider-pprint-eval-last-sexp . 2)
+ (cider-quit . 4)
+ (paredit-forward-barf-sexp . 2)
+ (check-parens . 2)
+ (cider-repl-clear-buffer . 1)
+ (clojure-test-pprint-result . 1)
+)
